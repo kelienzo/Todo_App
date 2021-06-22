@@ -8,12 +8,11 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var usernameDisplay: TextView
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         usernameDisplay = findViewById(R.id.usernameDisplay)
 
-        usernameDisplay.text = "Hello human beings"
+        usernameDisplay.text = intent.getStringExtra("username")
     }
 }
